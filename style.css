@@ -62,7 +62,7 @@ button:hover {
   justify-content: center;
   background-color: grey;
   border: none;
-  margin: 20px auto; /* Center it horizontally */
+  margin: 20px auto;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
