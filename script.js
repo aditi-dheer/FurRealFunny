@@ -74,6 +74,7 @@ form.addEventListener("submit", async function (e) {
 
             // generate the image!
             updateMemeCanvas(canvas, image, topTextInput.textContent, bottomTextInput.textContent);
+            enableDownload();
         } else {
             topTextInput.textContent = "Oops, Gemini didn't respond with text.";
         }
@@ -114,4 +115,16 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     ctx.textBaseline = "bottom";
     ctx.strokeText(bottomText, width / 2, height - yOffset);
     ctx.fillText(bottomText, width / 2, height - yOffset);
+};
+
+const downloadBtn = document.getElementById("downloadBtn");
+
+function enableDownload() {
+    downloadBtn.style.display = "inline-block"; // Show the button
+    downloadBtn.onclick = function () {
+        const link = document.createElement("a");
+        link.download = "mcat_meme.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    };
 }
