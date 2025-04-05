@@ -1,5 +1,7 @@
 # MCAT Meme Generator 🐱
 
+## Cat Your Worries Away!!
+
 ## Overview 🌟
 Welcome to the **MCAT Meme Generator**! This fun web app allows students to generate humorous cat memes with study-related captions. You can enter your mood or thoughts, and the app will generate a meme with a random cat image and a custom caption, tailored to your mood. 😺
 
