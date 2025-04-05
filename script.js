@@ -48,12 +48,9 @@ form.addEventListener("submit", async function (e) {
                 splitIndex = middleIndex;
             }
 
-            const topText = caption.slice(0, splitIndex).trim();
-            const bottomText = caption.slice(splitIndex).trim();
-
             // Set the text content for both top and bottom captions
-            topTextInput.textContent = topText;
-            bottomTextInput.textContent = bottomText;
+            topTextInput.textContent = caption.slice(0, splitIndex).trim();
+            bottomTextInput.textContent = caption.slice(splitIndex).trim();
 
             // generate the image!
             updateMemeCanvas(canvas, image, topTextInput.textContent, bottomTextInput.textContent);
@@ -72,7 +69,7 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
     const ctx = canvas.getContext("2d");
     const width = image.width;
     const height = image.height;
-    const fontSize = Math.floor(width / 19);
+    const fontSize = Math.floor(width / 17);
     const yOffset = height / 25;
 
     // Update canvas background
