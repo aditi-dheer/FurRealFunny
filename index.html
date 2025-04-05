@@ -10,18 +10,23 @@
   <div class="container">
     <h1>MCAT - Meme Cat 🐱</h1>
     <p>Enter how you're feeling and let the meme magic begin!</p>
-    
-    <input id="inputText" type="text" placeholder="Type your thoughts here..." />
-    <button onclick="generateMeme()">Generate Meme</button>
+    <div class="meme-generator">
+      <!-- meme generator by Aditi-->
+      <form id="myForm">
+        <input id="userInput" type="text" placeholder="Type your thoughts here..." required />
+        <button type="submit">Generate Meme</button>
+      </form>
 
-    <div id="loading" style="display: none;">Generating...</div>
-    <div id="meme-container" style="display: none;">
-      <img id="memeImage" src="/cat-computer.jpg" alt="Meme Image" />
-      <div id="top-caption" class="caption"></div>
-      <div id="bottom-caption" class="caption"></div>
+      <div id="loading" style="display: none;">Generating...</div>
+
+      <div id="meme-container" style="display: none;">
+        <div id="top-caption" class="caption"></div>
+        <div id="bottom-caption" class="caption"></div>
+      </div>
+      <canvas id="meme"></canvas>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
