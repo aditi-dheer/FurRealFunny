@@ -26,7 +26,7 @@ form.addEventListener("submit", async function (e) {
       contents: [{
         role: "user",
         parts: [{
-          text: `I have a cat meme image. I need you to generate a short caption for that. For context, I am a student so it should be study related. I have an image already do not generate a new image. Your response should only be the words of text, do not include any other words or characters around it. This is what it should be based on: ${input}`
+          text: `Also, there must be NO cuss words. your response should not be inappropriate. I have a cat meme image. I need you to generate a short caption for that. For context, I am a student so it should be study related. I have an image already do not generate a new image. Your response should only be the words of text, do not include any other words or characters around it. This is what it should be based on: ${input}`
         }]
       }]
     });
