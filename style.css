@@ -10,6 +10,8 @@ body {
   
   .container {
     text-align: center;
+    position: relative;
+    margin-top: 50px;  
   }
   
   input {
@@ -59,4 +61,23 @@ body {
   #bottom-caption {
     bottom: 10%;
   }
+
+  #top-caption,
+#bottom-caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  width: 90%; /* Adjust width */
+  text-align: center;
+}
+
+/* Style for the meme image */
+#memeImage {
+  width: 80%; /* Adjust the size of the meme image */
+  max-width: 600px;
+  height: auto;
+}
   
