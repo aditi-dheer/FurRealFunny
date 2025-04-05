@@ -10,6 +10,26 @@ const loading = document.getElementById("loading");
 const topCaptionDiv = document.getElementById("top-caption");
 const bottomCaptionDiv = document.getElementById("bottom-caption");
 const memeContainer = document.getElementById("meme-container");
+const memeImage = document.getElementById("memeImage");
+
+const imageLibrary = [
+  './images_library/cat_mouth_img.png',
+  './images_library/cats+liquid+2.png',
+  './images_library/Cool-cat-meme-2.jpg',
+  './images_library/loading-cat.gif',
+  './images_library/math cat.jpg',
+  './images_library/melted12_4e189508-0c43-406c-a76a-d6f05053163f.jpg.png',
+  './images_library/standing cat.png',
+  './images_library/table_cat.jpeg',
+  './images_library/98e24af569e8f8dfb4391dbac0accb10_9edaab163f5e46e04be6a7ecb1dda7ae.webp',
+  './images_library/Screen_Shot_2024-03-15_at_10.53.41_AM.webp'
+];
+
+// Function to get a random image from the library
+function getRandomImage() {
+  const randomIndex = Math.floor(Math.random() * imageLibrary.length);
+  return imageLibrary[randomIndex];
+}
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -22,6 +42,9 @@ form.addEventListener("submit", async function (e) {
   memeContainer.style.display = "none";
   topCaptionDiv.textContent = "";
   bottomCaptionDiv.textContent = "";
+
+  // Randomly select an image
+  memeImage.src = getRandomImage();
 
   try {
     const result = await ai.models.generateContent({
