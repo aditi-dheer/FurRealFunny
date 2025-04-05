@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCAT Meme Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MCAT - Meme Cat 🐱</h1>
+    <p>Enter how you're feeling and let the meme magic begin!</p>
+    
+    <input id="inputText" type="text" placeholder="Type your thoughts here..." />
+    <button onclick="generateMeme()">Generate Meme</button>
+
+    <div id="loading" style="display: none;">Generating...</div>
+    <div id="meme-container" style="display: none;">
+      <img id="memeImage" src="/cat-computer.jpg" alt="Meme Image" />
+      <div id="top-caption" class="caption"></div>
+      <div id="bottom-caption" class="caption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
