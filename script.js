@@ -52,13 +52,15 @@ form.addEventListener("submit", async function (e) {
             contents: [{
                 role: "user",
                 parts: [{
-                    text: `Here is a cat meme image, generate a caption for it. Context: I am a student. The image is: ${input}`
+                    text: `Also, there must be NO cuss words. Your response should not be inappropriate. I have a cat meme image. I need you to generate a short caption for that. For context, I am a student so it should be study related. I have an image already, do not generate a new image. Your response should only be the words of text, do not include any other words or characters around it. This is what it should be based on: ${input}`
                 }]
             }]
         });
-
+     
+     
         const caption = result.candidates?.[0]?.content?.parts?.[0]?.text;
-
+     
+    
         if (caption) {
             // Split caption into top and bottom text
             const middleIndex = Math.floor(caption.length / 2);
