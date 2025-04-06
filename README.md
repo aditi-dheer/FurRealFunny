@@ -1,4 +1,4 @@
-# MCAT Meme Generator 🐱
+# FurRealFunny 🐱
 
 ## Cat Your Worries Away!!
 
